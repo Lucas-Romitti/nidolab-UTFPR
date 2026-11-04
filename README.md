@@ -36,6 +36,8 @@ O protótipo das interfaces será desenvolvido no **Figma**, contemplando as ver
 
 https://stitch.withgoogle.com/projects/15789640935433994293
 
+A exportação das telas, imagens e códigos do Stitch está disponível em [stitch-export](./stitch-export/README.md).
+
 ---
 
 ## 🌐 Site em Produção

@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nidolab - Pesquisa de Pokémon</title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="nidolab-theme.css" rel="stylesheet">
+  <style>
+    .filter-pills-scroll {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    .filter-pills-scroll::-webkit-scrollbar {
+      height: 4px;
+    }
+    .stat-bar-bg {
+      height: 8px;
+      background-color: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .stat-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      background-color: #225566;
+    }
+    .stat-bar-fill.highlight {
+      background-color: #f97316;
+    }
+    @media (max-width: 991.98px) {
+      .detail-panel {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body class="has-bottom-nav">
+
+  <!-- Header -->
+  <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-2">
+    <div class="container-xl">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-uppercase" href="index.html" style="color: #225566;">
+        <img src="images/nidolab-logo.png" alt="Nidolab Logo" style="width: 36px; height: 36px; object-fit: contain;">
+        <span>Nidolab</span>
+        <span class="badge bg-light text-secondary border fw-normal" style="font-size: 0.7rem;">POKÉDEX</span>
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <span class="badge rounded-pill bg-light text-secondary border px-2 py-1" style="font-size: 0.75rem;">
+          <i class="bi bi-circle-fill text-warning me-1" style="font-size: 6px;"></i>VAGA 1/6
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-xl py-3 py-lg-4">
+    <!-- Busca e Filtros Rápidos -->
+    <div class="card card-lab p-3 mb-3 shadow-xs">
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+        <input type="text" class="form-control border-start-0 ps-0" placeholder="Pesquisar por nome, número ou tier..." value="Garchomp">
+        <button class="btn btn-outline-secondary border-start-0" type="button"><i class="bi bi-x-circle-fill"></i></button>
+      </div>
+
+      <div class="filter-pills-scroll">
+        <button class="btn btn-sm btn-primary-lab rounded-pill px-3">Todos (15)</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Dragão</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Terra</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Água</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Fogo</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Aço</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Fada</button>
+      </div>
+    </div>
+
+    <!-- Grid: Split View no Desktop / Stack no Mobile -->
+    <div class="row g-3 g-lg-4">
+      <div class="col-12 col-lg-7">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <small class="text-secondary fw-bold text-uppercase">Resultados (15 competidores)</small>
+          <small class="text-muted">BST Decrescente</small>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+          <!-- Garchomp -->
+          <div class="card card-lab p-3 border-2" style="border-color: #225566 !important; background-color: #f8fbff;">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div class="rounded-3 bg-white p-2 border text-center" style="width: 52px; height: 52px;">
+                  <i class="bi bi-shield-shaded fs-3" style="color: #225566;"></i>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <h6 class="fw-bold mb-0">Garchomp</h6>
+                    <span class="badge bg-dark" style="font-size: 0.65rem;">#445</span>
+                    <span class="badge bg-warning-subtle text-warning-emphasis" style="font-size: 0.65rem;">OU TIER</span>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <span class="badge text-white" style="background-color: var(--type-dragon); font-size: 0.6rem;">DRAGÃO</span>
+                    <span class="badge text-white" style="background-color: var(--type-ground); font-size: 0.6rem;">TERRA</span>
+                    <small class="text-muted ms-2">BST 600</small>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-primary-lab rounded-pill px-3"><i class="bi bi-check2"></i> Selecionado</button>
+            </div>
+          </div>
+
+          <!-- Flutter Mane -->
+          <div class="card card-lab p-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div class="rounded-3 bg-white p-2 border text-center" style="width: 52px; height: 52px;">
+                  <i class="bi bi-stars fs-3 text-secondary"></i>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <h6 class="fw-bold mb-0">Flutter Mane</h6>
+                    <span class="badge bg-dark" style="font-size: 0.65rem;">#987</span>
+                    <span class="badge bg-danger-subtle text-danger" style="font-size: 0.65rem;">VGC S</span>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <span class="badge text-white" style="background-color: var(--type-ghost); font-size: 0.6rem;">FANTASMA</span>
+                    <span class="badge text-white" style="background-color: var(--type-fairy); font-size: 0.6rem;">FADA</span>
+                    <small class="text-muted ms-2">BST 570</small>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-outline-lab rounded-pill px-3"><i class="bi bi-plus-lg"></i> Adicionar</button>
+            </div>
+          </div>
+
+          <!-- Rillaboom -->
+          <div class="card card-lab p-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div class="rounded-3 bg-white p-2 border text-center" style="width: 52px; height: 52px;">
+                  <i class="bi bi-tree fs-3 text-success"></i>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <h6 class="fw-bold mb-0">Rillaboom</h6>
+                    <span class="badge bg-dark" style="font-size: 0.65rem;">#812</span>
+                    <span class="badge bg-success-subtle text-success" style="font-size: 0.65rem;">OU TIER</span>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <span class="badge text-white" style="background-color: var(--type-grass); font-size: 0.6rem;">PLANTA</span>
+                    <small class="text-muted ms-2">BST 530</small>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-outline-lab rounded-pill px-3"><i class="bi bi-plus-lg"></i> Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detalhes do Pokémon -->
+      <div class="col-12 col-lg-5 detail-panel">
+        <div class="card card-lab p-3 p-md-4 shadow-sm position-sticky" style="top: 80px;">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div>
+              <span class="badge bg-secondary-subtle text-secondary mb-1">#445 • SINNOH POKÉDEX</span>
+              <h4 class="fw-bold mb-0 text-dark">Garchomp</h4>
+              <small class="text-secondary">Mach Pokémon • Físico Sweeper</small>
+            </div>
+            <div class="d-flex gap-1">
+              <span class="badge text-white" style="background-color: var(--type-dragon);">DRAGÃO</span>
+              <span class="badge text-white" style="background-color: var(--type-ground);">TERRA</span>
+            </div>
+          </div>
+
+          <div class="bg-light rounded-3 p-3 text-center mb-3 border">
+            <div class="py-4">
+              <i class="bi bi-shield-shaded display-3" style="color: #225566;"></i>
+              <div class="mt-2 text-muted small">1.9 m / 95.0 kg • Comp. S-Rank</div>
+            </div>
+          </div>
+
+          <!-- Base Stats (BST 600) -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="fw-bold text-uppercase">Atributos Base (BST: 600)</small>
+              <span class="badge bg-success-subtle text-success">Pseudo-Lendário</span>
+            </div>
+
+            <div class="row align-items-center small mb-1">
+              <div class="col-3 text-muted">HP</div>
+              <div class="col-2 fw-bold text-end">108</div>
+              <div class="col-7"><div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 54%;"></div></div></div>
+            </div>
+            <div class="row align-items-center small mb-1">
+              <div class="col-3 text-primary fw-bold" style="color: #f97316 !important;">ATK ▲</div>
+              <div class="col-2 fw-bold text-end">130</div>
+              <div class="col-7"><div class="stat-bar-bg"><div class="stat-bar-fill highlight" style="width: 65%;"></div></div></div>
+            </div>
+            <div class="row align-items-center small mb-1">
+              <div class="col-3 text-muted">DEF</div>
+              <div class="col-2 fw-bold text-end">95</div>
+              <div class="col-7"><div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 48%;"></div></div></div>
+            </div>
+            <div class="row align-items-center small mb-1">
+              <div class="col-3 text-muted">SPA</div>
+              <div class="col-2 fw-bold text-end">80</div>
+              <div class="col-7"><div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 40%;"></div></div></div>
+            </div>
+            <div class="row align-items-center small mb-1">
+              <div class="col-3 text-muted">SPD</div>
+              <div class="col-2 fw-bold text-end">85</div>
+              <div class="col-7"><div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 43%;"></div></div></div>
+            </div>
+            <div class="row align-items-center small mb-1">
+              <div class="col-3 text-muted">SPE</div>
+              <div class="col-2 fw-bold text-end">102</div>
+              <div class="col-7"><div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 51%;"></div></div></div>
+            </div>
+          </div>
+
+          <div class="card p-2 bg-light border-0 mb-3 small">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">Habilidade:</span>
+              <span class="fw-semibold">Rough Skin</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="text-muted">Item Sugerido:</span>
+              <span class="fw-semibold">Choice Scarf (+50% Vel)</span>
+            </div>
+          </div>
+
+          <a href="builder.html" class="btn btn-primary-lab w-100 py-2 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-person-plus-fill"></i> Adicionar à Equipe (Vaga 1/6)
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <nav class="nidolab-bottom-nav py-2 px-3">
+    <div class="d-flex align-items-center justify-content-between text-center">
+      <a href="index.html" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-house-door fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Início</small>
+      </a>
+      <a href="teams.html" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-folder2 fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Meus Times</small>
+      </a>
+      <a href="builder.html" class="nav-fab-btn text-decoration-none mx-2">
+        <i class="bi bi-plus-lg fs-4"></i>
+      </a>
+      <a href="pokemon.html" class="text-decoration-none active" style="color: #225566; flex: 1;">
+        <i class="bi bi-search fs-5 d-block"></i>
+        <small style="font-size: 0.65rem; font-weight: 600;">Pokédex</small>
+      </a>
+      <a href="#" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-person-badge fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Perfil</small>
+      </a>
+    </div>
+  </nav>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

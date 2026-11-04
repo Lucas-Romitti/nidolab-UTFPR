@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nidolab - Preparar Pokémon (EVs & Moves)</title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="nidolab-theme.css" rel="stylesheet">
+  <style>
+    .ev-progress-bar {
+      height: 8px;
+      border-radius: 4px;
+      background-color: #e2e8f0;
+      overflow: hidden;
+    }
+    .ev-progress-fill {
+      height: 100%;
+      background-color: #225566;
+      border-radius: 4px;
+    }
+    .ev-progress-fill.active-max {
+      background-color: #f97316;
+    }
+  </style>
+</head>
+<body class="has-bottom-nav">
+
+  <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-2">
+    <div class="container-xl d-flex align-items-center justify-content-between">
+      <a href="builder.html" class="btn btn-sm btn-outline-secondary rounded-pill px-3 d-flex align-items-center gap-1">
+        <i class="bi bi-arrow-left"></i> Voltar ao Time Alpha
+      </a>
+      <div class="text-center">
+        <span class="badge bg-light text-secondary border">SLOT 01/06</span>
+        <span class="fw-bold d-block" style="font-size: 0.85rem;">Garchomp</span>
+      </div>
+      <button class="btn btn-primary-lab btn-sm rounded-3 d-none d-sm-inline-block">Salvar Alterações</button>
+    </div>
+  </header>
+
+  <main class="container-xl py-3 py-lg-4">
+    <div class="row g-3 g-lg-4">
+      <!-- Ficha & Moveset -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-lab p-3 mb-3 shadow-xs">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <span class="badge bg-secondary-subtle text-secondary">#445 • OU TIER</span>
+              <h4 class="fw-bold mb-0">Garchomp</h4>
+              <small class="text-secondary">Dragão Terrestre</small>
+            </div>
+            <div class="d-flex gap-1">
+              <span class="badge text-white" style="background-color: var(--type-dragon);">DRAGÃO</span>
+              <span class="badge text-white" style="background-color: var(--type-ground);">TERRA</span>
+            </div>
+          </div>
+
+          <div class="row g-2">
+            <div class="col-6">
+              <div class="p-2 bg-light rounded-3">
+                <small class="text-muted d-block" style="font-size: 0.7rem;">NATURE</small>
+                <span class="fw-bold small text-primary" style="color: #225566 !important;">Jolly (+Vel, -SpA)</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-2 bg-light rounded-3">
+                <small class="text-muted d-block" style="font-size: 0.7rem;">ITEM EQUIPADO</small>
+                <span class="fw-bold small">Choice Scarf</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-lab p-3 mb-3 shadow-xs">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold mb-0"><i class="bi bi-lightning-charge text-warning me-1"></i> Ataques Configurados (4/4)</h6>
+            <button class="btn btn-sm btn-outline-lab py-1 px-2" style="font-size: 0.75rem;">+ Trocar Ataques</button>
+          </div>
+
+          <div class="d-flex flex-column gap-2">
+            <div class="border rounded-3 p-2 bg-light-subtle d-flex justify-content-between align-items-center">
+              <div>
+                <span class="badge text-white me-1" style="background-color: var(--type-ground); font-size: 0.65rem;">TERRA</span>
+                <span class="fw-bold" style="font-size: 0.85rem;">Earthquake</span>
+              </div>
+              <small class="text-muted">PWR 100 • ACC 100% • PP 10</small>
+            </div>
+            <div class="border rounded-3 p-2 bg-light-subtle d-flex justify-content-between align-items-center">
+              <div>
+                <span class="badge text-white me-1" style="background-color: var(--type-dragon); font-size: 0.65rem;">DRAGÃO</span>
+                <span class="fw-bold" style="font-size: 0.85rem;">Dragon Claw</span>
+              </div>
+              <small class="text-muted">PWR 80 • ACC 100% • PP 15</small>
+            </div>
+            <div class="border rounded-3 p-2 bg-light-subtle d-flex justify-content-between align-items-center">
+              <div>
+                <span class="badge text-white me-1" style="background-color: #64748b; font-size: 0.65rem;">NORMAL</span>
+                <span class="fw-bold" style="font-size: 0.85rem;">Swords Dance</span>
+              </div>
+              <small class="text-muted">Efeito: +2 Atk • PP 20</small>
+            </div>
+            <div class="border rounded-3 p-2 bg-light-subtle d-flex justify-content-between align-items-center">
+              <div>
+                <span class="badge text-white me-1" style="background-color: var(--type-steel); font-size: 0.65rem;">AÇO</span>
+                <span class="fw-bold" style="font-size: 0.85rem;">Iron Head</span>
+              </div>
+              <small class="text-muted">PWR 80 • ACC 100% • Anti-Fada</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calibrador de 508 EVs -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-lab p-3 p-md-4 shadow-sm">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <h6 class="fw-bold mb-0"><i class="bi bi-sliders2 text-primary me-1" style="color: #225566 !important;"></i> Calibrador de EVs & IVs</h6>
+              <small class="text-muted">Capacidade máxima: 508 Pontos</small>
+            </div>
+            <span class="badge badge-lab">Restantes: 4 / 508</span>
+          </div>
+
+          <div class="d-flex flex-wrap gap-1 mb-4">
+            <button class="btn btn-sm btn-outline-secondary py-1 px-2" style="font-size: 0.72rem;">Sweeper Físico</button>
+            <button class="btn btn-sm btn-outline-secondary py-1 px-2" style="font-size: 0.72rem;">Bulky Tank</button>
+            <button class="btn btn-sm btn-outline-secondary py-1 px-2" style="font-size: 0.72rem;">Min / Max Speed</button>
+            <button class="btn btn-sm btn-outline-danger ms-auto py-1 px-2" style="font-size: 0.72rem;">Zerar</button>
+          </div>
+
+          <div class="d-flex flex-column gap-3 mb-4">
+            <div>
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold">HP</span>
+                <span><strong>4</strong> EVs (Stat: 358)</span>
+              </div>
+              <div class="ev-progress-bar"><div class="ev-progress-fill" style="width: 2%;"></div></div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold text-warning-emphasis">ATK ▲ MAX</span>
+                <span class="text-warning-emphasis"><strong>252</strong> EVs (Stat: 359)</span>
+              </div>
+              <div class="ev-progress-bar"><div class="ev-progress-fill active-max" style="width: 100%;"></div></div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold">DEF</span>
+                <span><strong>0</strong> EVs (Stat: 226)</span>
+              </div>
+              <div class="ev-progress-bar"><div class="ev-progress-fill" style="width: 0%;"></div></div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold text-danger">SPA ▼ Jolly</span>
+                <span><strong>0</strong> EVs (Stat: 176)</span>
+              </div>
+              <div class="ev-progress-bar"><div class="ev-progress-fill" style="width: 0%;"></div></div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold">SPD</span>
+                <span><strong>0</strong> EVs (Stat: 206)</span>
+              </div>
+              <div class="ev-progress-bar"><div class="ev-progress-fill" style="width: 0%;"></div></div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold text-primary" style="color: #225566 !important;">SPE ▲ MAX</span>
+                <span><strong>252</strong> EVs (Stat: 333)</span>
+              </div>
+              <div class="ev-progress-bar"><div class="ev-progress-fill" style="width: 100%;"></div></div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary-lab w-100 py-2 fw-semibold rounded-3 d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-check-circle"></i> Salvar Alterações do Pokémon
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <nav class="nidolab-bottom-nav py-2 px-3">
+    <div class="d-flex align-items-center justify-content-between text-center">
+      <a href="index.html" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-house-door fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Início</small>
+      </a>
+      <a href="teams.html" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-folder2 fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Meus Times</small>
+      </a>
+      <a href="builder.html" class="nav-fab-btn text-decoration-none mx-2">
+        <i class="bi bi-plus-lg fs-4"></i>
+      </a>
+      <a href="#" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-radar fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Sinergia</small>
+      </a>
+      <a href="#" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-person-badge fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Perfil</small>
+      </a>
+    </div>
+  </nav>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

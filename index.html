@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nidolab - Início</title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="nidolab-theme.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="\images\favicon.ico">
+</head>
+<body class="has-bottom-nav">
+
+  <!-- Header -->
+  <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-2">
+    <div class="container-xl">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-uppercase" href="#" style="color: #225566; letter-spacing: 0.05em;">
+        <img src="images/nidolab-logo.png" alt="Nidolab Logo" style="width: 36px; height: 36px; object-fit: contain;">
+        <span>Nidolab</span>
+        <span class="badge bg-light text-secondary border fw-normal d-none d-sm-inline-block" style="font-size: 0.7rem;">ARENA LAB</span>
+      </a>
+
+      <!-- Mobile Top Action -->
+      <div class="d-flex align-items-center gap-2 d-lg-none ms-auto">
+        <span class="badge rounded-pill bg-light text-secondary border px-2 py-1" style="font-size: 0.75rem;">
+          <i class="bi bi-circle-fill text-warning me-1" style="font-size: 6px;"></i>0/6
+        </span>
+        <a href="/profile" class="btn btn-sm btn-light rounded-circle p-1" style="width: 34px; height: 34px;">
+          <i class="bi bi-person text-secondary"></i>
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav-links ms-auto align-items-center gap-3">
+        <ul class="navbar-nav flex-row gap-3 align-items-center">
+          <li class="nav-item"><a class="nav-link active fw-semibold" href="index.html" style="color: #225566;">Início</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="teams.html">Meus Times</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="builder.html">Criar Equipe</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="pokemon.html">Pesquisa Pokédex</a></li>
+        </ul>
+        <div class="vr mx-2 d-none d-lg-block" style="height: 24px;"></div>
+        <span class="badge bg-light text-secondary border py-2 px-3 rounded-pill">Regulação G</span>
+        <div class="rounded-circle bg-secondary-subtle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+          <i class="bi bi-person text-secondary"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container-xl py-3 py-lg-4">
+    <!-- Row 1: Hero & Radar -->
+    <div class="row g-3 g-lg-4 mb-4 align-items-stretch">
+      <div class="col-12 col-lg-8">
+        <div class="card card-lab p-3 p-md-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+              <span class="badge badge-lab rounded-pill px-3 py-1">VGC REGULAÇÃO G & OU</span>
+              <small class="text-secondary fw-semibold text-uppercase" style="font-size: 0.7rem;">Temporada Atual</small>
+            </div>
+            <small class="text-primary fw-bold text-uppercase d-block mb-1" style="color: #225566 !important; font-size: 0.75rem; letter-spacing: 0.05em;">
+              Nidolab Arena Lab • Champions
+            </small>
+            <h1 class="fw-bold mb-2 text-dark" style="letter-spacing: -0.02em; font-size: calc(1.4rem + 1vw);">
+              Monte seu time ideal no laboratório competitivo.
+            </h1>
+            <p class="text-secondary small fs-md-6 mb-4 lh-base">
+              Centralize dados competitivos, configure ataques, distribua 508 EVs e analise fraquezas elementais com precisão para torneios mundiais.
+            </p>
+          </div>
+
+          <div class="card p-3 mb-4 border-0 shadow-xs" style="background-color: #eff6ff; border-radius: 0.75rem;">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-2">
+                <div class="p-2 bg-white rounded-3 shadow-xs">
+                  <i class="bi bi-grid-fill text-primary" style="color: #225566 !important;"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold" style="font-size: 0.88rem;">Equipe Alpha (Em Montagem)</h6>
+                  <small class="text-secondary" style="font-size: 0.75rem;">Capacidade: 0 de 6 integrantes configurados</small>
+                </div>
+              </div>
+              <span class="badge bg-light text-secondary border">PRONTO</span>
+            </div>
+          </div>
+
+          <div class="d-grid d-sm-flex flex-wrap align-items-center gap-2 gap-sm-3">
+            <a href="builder.html" class="btn btn-primary-lab py-2 px-4 fw-semibold rounded-3 d-flex align-items-center justify-content-center gap-2">
+              <i class="bi bi-plus-circle"></i> Criar Novo Time
+            </a>
+            <a href="teams.html" class="btn btn-outline-lab py-2 px-4 fw-semibold rounded-3 d-flex align-items-center justify-content-center gap-2">
+              <i class="bi bi-folder2-open"></i> Ver Meus Times
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4">
+        <div class="card card-lab p-3 p-md-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h6 class="fw-bold mb-0"><i class="bi bi-bar-chart-line text-primary me-1" style="color: #225566 !important;"></i> META RADAR</h6>
+              <span class="badge bg-light text-secondary border">VGC 2025</span>
+            </div>
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold">Pressão Climática (Sun / Rain)</span>
+                <span class="text-primary fw-bold" style="color: #225566 !important;">38.4%</span>
+              </div>
+              <div class="progress" style="height: 6px;">
+                <div class="progress-bar" style="width: 38.4%; background-color: #225566;"></div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold">Trick Room Dominance</span>
+                <span class="text-primary fw-bold" style="color: #225566 !important;">26.1%</span>
+              </div>
+              <div class="progress" style="height: 6px;">
+                <div class="progress-bar" style="width: 26.1%; background-color: #225566;"></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold">Tailwind / Fast Offense</span>
+                <span class="text-primary fw-bold" style="color: #225566 !important;">35.5%</span>
+              </div>
+              <div class="progress" style="height: 6px;">
+                <div class="progress-bar" style="width: 35.5%; background-color: #225566;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0 p-3 mt-auto" style="background-color: #eff6ff; border-radius: 0.75rem;">
+            <div class="d-flex align-items-center gap-2">
+              <div class="p-2 rounded-circle bg-warning-subtle text-warning flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                <i class="bi bi-lightbulb-fill" style="font-size: 0.85rem;"></i>
+              </div>
+              <div>
+                <small class="fw-bold text-uppercase d-block mb-1" style="font-size: 0.68rem; color: #854d0e;">Dica do Laboratório</small>
+                <p class="text-secondary small mb-0 lh-sm" style="font-size: 0.75rem;">
+                  Monitore as fraquezas triplas no radar de sinergia antes de validar a Pokédex da sua equipe.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: 3 Passos Onboarding -->
+    <div class="mb-4">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h5 class="fw-bold mb-0" style="font-size: 1.05rem;">Como Funciona o Nidolab</h5>
+        <span class="badge bg-light text-muted border">FLUXO EM 3 ETAPAS</span>
+      </div>
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <div class="card card-lab p-3 h-100 shadow-xs">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="d-flex align-items-center justify-content-center flex-shrink-0 fw-bold rounded-3" style="width: 38px; height: 38px; background-color: #eff6ff; color: #225566;">01</div>
+              <div>
+                <h6 class="fw-bold mb-1" style="font-size: 0.9rem;"><i class="bi bi-search me-1" style="color: #225566;"></i> Pesquise Pokémon</h6>
+                <p class="text-secondary small mb-0 lh-sm">Filtre espécies por tipo, estatísticas base e tier competitivo oficial.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card card-lab p-3 h-100 shadow-xs">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="d-flex align-items-center justify-content-center flex-shrink-0 fw-bold rounded-3" style="width: 38px; height: 38px; background-color: #eff6ff; color: #225566;">02</div>
+              <div>
+                <h6 class="fw-bold mb-1" style="font-size: 0.9rem;"><i class="bi bi-sliders me-1" style="color: #225566;"></i> Ajuste Moves & EVs</h6>
+                <p class="text-secondary small mb-0 lh-sm">Calibre 4 ataques, natures, itens segurados e distribua 508 EVs com precisão.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card card-lab p-3 h-100 shadow-xs">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="d-flex align-items-center justify-content-center flex-shrink-0 fw-bold rounded-3" style="width: 38px; height: 38px; background-color: #eff6ff; color: #225566;">03</div>
+              <div>
+                <h6 class="fw-bold mb-1" style="font-size: 0.9rem;"><i class="bi bi-award me-1" style="color: #225566;"></i> Valide & Exporte</h6>
+                <p class="text-secondary small mb-0 lh-sm">Analise cobertura e exporte blocos de texto compatíveis com Pokémon Showdown.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé Desktop -->
+  <footer class="border-top bg-white py-3 d-none d-lg-block mt-5">
+    <div class="container-xl d-flex justify-content-between align-items-center small text-muted">
+      <span><strong>NIDOLAB</strong> • VGC 2025 Meta • © 2025 Laboratório de Campeões.</span>
+      <div class="d-flex gap-3">
+        <a href="pokemon.html" class="text-decoration-none text-muted">Pokédex</a>
+        <a href="#" class="text-decoration-none text-muted">Sinergia</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bottom Nav Mobile -->
+  <nav class="nidolab-bottom-nav py-2 px-3">
+    <div class="d-flex align-items-center justify-content-between text-center">
+      <a href="index.html" class="text-decoration-none active" style="color: #225566; flex: 1;">
+        <i class="bi bi-house-door-fill fs-5 d-block"></i>
+        <small style="font-size: 0.65rem; font-weight: 600;">Início</small>
+      </a>
+      <a href="teams.html" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-folder2 fs-5 d-block"></i>
+        <small style="font-size: 0.65rem; font-weight: 500;">Meus Times</small>
+      </a>
+      <a href="builder.html" class="nav-fab-btn text-decoration-none mx-2">
+        <i class="bi bi-plus-lg fs-4"></i>
+      </a>
+      <a href="#" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-radar fs-5 d-block"></i>
+        <small style="font-size: 0.65rem; font-weight: 500;">Sinergia</small>
+      </a>
+      <a href="#" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-person-badge fs-5 d-block"></i>
+        <small style="font-size: 0.65rem; font-weight: 500;">Perfil</small>
+      </a>
+    </div>
+  </nav>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

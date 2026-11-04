@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nidolab - Criar Equipe (6/6)</title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="nidolab-theme.css" rel="stylesheet">
+  <style>
+    .pokemon-card-img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
+    }
+  </style>
+</head>
+<body class="has-bottom-nav">
+
+  <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-2">
+    <div class="container-xl">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-uppercase" href="index.html" style="color: #225566;">
+        <img src="images/nidolab-logo.png" alt="Nidolab Logo" style="width: 36px; height: 36px; object-fit: contain;">
+        <span>Nidolab</span>
+        <span class="badge bg-light text-secondary border fw-normal" style="font-size: 0.7rem;">BUILDER 6/6</span>
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <span class="badge bg-success-subtle text-success border border-success-subtle py-2 px-3 rounded-pill fw-semibold">
+          <i class="bi bi-check-circle me-1"></i> Aprovado Torneio
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-xl py-3 py-lg-4">
+    <div class="card card-lab p-3 p-md-4 mb-4 shadow-sm">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div>
+          <div class="d-flex align-items-center gap-2 mb-1">
+            <span class="badge bg-dark">VGC 2025</span>
+            <span class="badge badge-lab">REG G</span>
+            <span class="badge bg-warning-subtle text-warning-emphasis">6/6 Integrantes</span>
+          </div>
+          <h2 class="fw-bold mb-1" style="font-size: 1.5rem;">Time Competitivo Alpha</h2>
+          <small class="text-secondary">OTS VGC 2025 Regularizado &bull; Sem violações de espécies ou itens duplicados</small>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-lab btn-sm rounded-3"><i class="bi bi-share me-1"></i> Exportar Showdown</button>
+          <button class="btn btn-primary-lab btn-sm rounded-3"><i class="bi bi-floppy me-1"></i> Salvar Equipe</button>
+        </div>
+      </div>
+    </div>
+
+    <h5 class="fw-bold mb-3"><i class="bi bi-grid-fill me-1" style="color: #225566;"></i> Roster de Batalha (6 Slots Ativos)</h5>
+
+    <div class="row g-3 mb-4">
+
+      <!-- Slot 1 - Garchomp -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-lab p-3 h-100 shadow-xs border-top border-4" style="border-top-color: var(--type-dragon) !important;">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png"
+                alt="Garchomp"
+                class="pokemon-card-img"
+              >
+              <div>
+                <span class="badge bg-light text-secondary border">#445 &bull; Slot 01</span>
+                <h6 class="fw-bold mb-0 mt-1">Garchomp</h6>
+                <small class="text-muted" style="font-size: 0.72rem;">Physical Sweeper</small>
+              </div>
+            </div>
+            <div class="d-flex gap-1 ms-1 flex-shrink-0">
+              <a href="slot.html" class="btn btn-sm btn-light border p-1"><i class="bi bi-sliders"></i></a>
+              <button class="btn btn-sm btn-light border p-1 text-danger"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>
+          <div class="d-flex gap-1 mb-2">
+            <span class="badge text-white" style="background-color: var(--type-dragon); font-size: 0.65rem;">DRAGÃO</span>
+            <span class="badge text-white" style="background-color: var(--type-ground); font-size: 0.65rem;">TERRA</span>
+          </div>
+          <div class="bg-light p-2 rounded-2 small mb-2">
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Earthquake</span><span class="text-muted">100 BP</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Dragon Claw</span><span class="text-muted">80 BP</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Swords Dance</span><span class="text-muted">Status</span></div>
+            <div class="d-flex justify-content-between py-1"><span>Iron Head</span><span class="text-muted">80 BP</span></div>
+          </div>
+          <small class="text-secondary d-block">Item: Choice Scarf &bull; Nature: Jolly</small>
+        </div>
+      </div>
+
+      <!-- Slot 2 - Corviknight -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-lab p-3 h-100 shadow-xs border-top border-4" style="border-top-color: var(--type-steel) !important;">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/823.png"
+                alt="Corviknight"
+                class="pokemon-card-img"
+              >
+              <div>
+                <span class="badge bg-light text-secondary border">#823 &bull; Slot 02</span>
+                <h6 class="fw-bold mb-0 mt-1">Corviknight</h6>
+                <small class="text-muted" style="font-size: 0.72rem;">Bulky Pivot / Defog</small>
+              </div>
+            </div>
+            <div class="d-flex gap-1 ms-1 flex-shrink-0">
+              <a href="slot.html" class="btn btn-sm btn-light border p-1"><i class="bi bi-sliders"></i></a>
+              <button class="btn btn-sm btn-light border p-1 text-danger"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>
+          <div class="d-flex gap-1 mb-2">
+            <span class="badge text-white" style="background-color: var(--type-flying); font-size: 0.65rem;">VOADOR</span>
+            <span class="badge text-white" style="background-color: var(--type-steel); font-size: 0.65rem;">AÇO</span>
+          </div>
+          <div class="bg-light p-2 rounded-2 small mb-2">
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Brave Bird</span><span class="text-muted">120 BP</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Roost</span><span class="text-muted">Cura</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Defog</span><span class="text-muted">Hazards</span></div>
+            <div class="d-flex justify-content-between py-1"><span>U-turn</span><span class="text-muted">70 BP</span></div>
+          </div>
+          <small class="text-secondary d-block">Item: Leftovers &bull; Nature: Impish</small>
+        </div>
+      </div>
+
+      <!-- Slot 3 - Rotom-Wash -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-lab p-3 h-100 shadow-xs border-top border-4" style="border-top-color: var(--type-water) !important;">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10009.png"
+                alt="Rotom-Wash"
+                class="pokemon-card-img"
+              >
+              <div>
+                <span class="badge bg-light text-secondary border">#479-W &bull; Slot 03</span>
+                <h6 class="fw-bold mb-0 mt-1">Rotom-Wash</h6>
+                <small class="text-muted" style="font-size: 0.72rem;">Disruptor / SpA</small>
+              </div>
+            </div>
+            <div class="d-flex gap-1 ms-1 flex-shrink-0">
+              <a href="slot.html" class="btn btn-sm btn-light border p-1"><i class="bi bi-sliders"></i></a>
+              <button class="btn btn-sm btn-light border p-1 text-danger"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>
+          <div class="d-flex gap-1 mb-2">
+            <span class="badge text-white" style="background-color: var(--type-electric); font-size: 0.65rem;">ELÉTRICO</span>
+            <span class="badge text-white" style="background-color: var(--type-water); font-size: 0.65rem;">ÁGUA</span>
+          </div>
+          <div class="bg-light p-2 rounded-2 small mb-2">
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Volt Switch</span><span class="text-muted">70 BP</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Hydro Pump</span><span class="text-muted">110 BP</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Will-O-Wisp</span><span class="text-muted">Burn</span></div>
+            <div class="d-flex justify-content-between py-1"><span>Trick</span><span class="text-muted">Disrupt</span></div>
+          </div>
+          <small class="text-secondary d-block">Item: Sitrus Berry &bull; Nature: Bold</small>
+        </div>
+      </div>
+
+      <!-- Slot 4 - Incineroar -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-lab p-3 h-100 shadow-xs border-top border-4" style="border-top-color: var(--type-fire) !important;">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/727.png"
+                alt="Incineroar"
+                class="pokemon-card-img"
+              >
+              <div>
+                <span class="badge bg-light text-secondary border">#727 &bull; Slot 04</span>
+                <h6 class="fw-bold mb-0 mt-1">Incineroar</h6>
+                <small class="text-muted" style="font-size: 0.72rem;">Support / Intimidate</small>
+              </div>
+            </div>
+            <div class="d-flex gap-1 ms-1 flex-shrink-0">
+              <a href="slot.html" class="btn btn-sm btn-light border p-1"><i class="bi bi-sliders"></i></a>
+              <button class="btn btn-sm btn-light border p-1 text-danger"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>
+          <div class="d-flex gap-1 mb-2">
+            <span class="badge text-white" style="background-color: var(--type-fire); font-size: 0.65rem;">FOGO</span>
+            <span class="badge text-white" style="background-color: var(--type-dark); font-size: 0.65rem;">SOMBRIO</span>
+          </div>
+          <div class="bg-light p-2 rounded-2 small mb-2">
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Fake Out</span><span class="text-muted">Flinch +3</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Flare Blitz</span><span class="text-muted">120 BP</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Parting Shot</span><span class="text-muted">-1 Atk/SpA</span></div>
+            <div class="d-flex justify-content-between py-1"><span>Knock Off</span><span class="text-muted">65 BP</span></div>
+          </div>
+          <small class="text-secondary d-block">Item: Assault Vest &bull; Nature: Careful</small>
+        </div>
+      </div>
+
+      <!-- Slot 5 - Flutter Mane -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-lab p-3 h-100 shadow-xs border-top border-4" style="border-top-color: var(--type-fairy) !important;">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/987.png"
+                alt="Flutter Mane"
+                class="pokemon-card-img"
+              >
+              <div>
+                <span class="badge bg-light text-secondary border">#987 &bull; Slot 05</span>
+                <h6 class="fw-bold mb-0 mt-1">Flutter Mane</h6>
+                <small class="text-muted" style="font-size: 0.72rem;">Special Sweeper</small>
+              </div>
+            </div>
+            <div class="d-flex gap-1 ms-1 flex-shrink-0">
+              <a href="slot.html" class="btn btn-sm btn-light border p-1"><i class="bi bi-sliders"></i></a>
+              <button class="btn btn-sm btn-light border p-1 text-danger"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>
+          <div class="d-flex gap-1 mb-2">
+            <span class="badge text-white" style="background-color: var(--type-ghost); font-size: 0.65rem;">FANTASMA</span>
+            <span class="badge text-white" style="background-color: var(--type-fairy); font-size: 0.65rem;">FADA</span>
+          </div>
+          <div class="bg-light p-2 rounded-2 small mb-2">
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Moonblast</span><span class="text-muted">95 BP</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Shadow Ball</span><span class="text-muted">80 BP</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Dazzling Gleam</span><span class="text-muted">80 BP Spread</span></div>
+            <div class="d-flex justify-content-between py-1"><span>Protect</span><span class="text-muted">Defesa</span></div>
+          </div>
+          <small class="text-secondary d-block">Item: Booster Energy &bull; Nature: Timid</small>
+        </div>
+      </div>
+
+      <!-- Slot 6 - Rillaboom -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-lab p-3 h-100 shadow-xs border-top border-4" style="border-top-color: var(--type-grass) !important;">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/812.png"
+                alt="Rillaboom"
+                class="pokemon-card-img"
+              >
+              <div>
+                <span class="badge bg-light text-secondary border">#812 &bull; Slot 06</span>
+                <h6 class="fw-bold mb-0 mt-1">Rillaboom</h6>
+                <small class="text-muted" style="font-size: 0.72rem;">Terrain Setter / Priority</small>
+              </div>
+            </div>
+            <div class="d-flex gap-1 ms-1 flex-shrink-0">
+              <a href="slot.html" class="btn btn-sm btn-light border p-1"><i class="bi bi-sliders"></i></a>
+              <button class="btn btn-sm btn-light border p-1 text-danger"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>
+          <div class="d-flex gap-1 mb-2">
+            <span class="badge text-white" style="background-color: var(--type-grass); font-size: 0.65rem;">PLANTA</span>
+          </div>
+          <div class="bg-light p-2 rounded-2 small mb-2">
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Grassy Glide</span><span class="text-muted">Prio +1</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Wood Hammer</span><span class="text-muted">120 BP</span></div>
+            <div class="d-flex justify-content-between py-1 border-bottom border-light-subtle"><span>Fake Out</span><span class="text-muted">Flinch +3</span></div>
+            <div class="d-flex justify-content-between py-1"><span>High Horsepower</span><span class="text-muted">95 BP</span></div>
+          </div>
+          <small class="text-secondary d-block">Item: Miracle Seed &bull; Nature: Adamant</small>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Cobertura -->
+    <div class="card card-lab p-3 p-md-4 shadow-sm mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h6 class="fw-bold mb-0"><i class="bi bi-shield-check text-success me-1"></i> Cobertura Ofensiva do Esquadrão</h6>
+        <span class="badge bg-light text-secondary border">14 de 18 Tipos Super-Efetivos</span>
+      </div>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge p-2 text-white" style="background-color: var(--type-fire);">Fogo x3</span>
+        <span class="badge p-2 text-white" style="background-color: var(--type-water);">Água x2</span>
+        <span class="badge p-2 text-white" style="background-color: var(--type-grass);">Grama x2</span>
+        <span class="badge p-2 text-white" style="background-color: var(--type-electric);">Elétrico x2</span>
+        <span class="badge p-2 text-white" style="background-color: var(--type-ground);">Terra x2</span>
+        <span class="badge p-2 text-white" style="background-color: var(--type-dragon);">Dragão x3</span>
+        <span class="badge p-2 text-white" style="background-color: var(--type-dark);">Sombrio x2</span>
+        <span class="badge p-2 text-white" style="background-color: var(--type-fairy);">Fada x2</span>
+      </div>
+    </div>
+  </main>
+
+  <nav class="nidolab-bottom-nav py-2 px-3">
+    <div class="d-flex align-items-center justify-content-between text-center">
+      <a href="index.html" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-house-door fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Início</small>
+      </a>
+      <a href="teams.html" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-folder2 fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Meus Times</small>
+      </a>
+      <a href="builder.html" class="nav-fab-btn text-decoration-none mx-2 active">
+        <i class="bi bi-plus-lg fs-4"></i>
+      </a>
+      <a href="#" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-radar fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Sinergia</small>
+      </a>
+      <a href="#" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-person-badge fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Perfil</small>
+      </a>
+    </div>
+  </nav>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

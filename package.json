@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/Lucas-Romitti/nidolab#readme",
   "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.2",
     "jquery": "^4.0.0",
     "uuid": "^14.0.2"
   },

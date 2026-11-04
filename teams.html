@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nidolab - Meus Times & Confirmação</title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="nidolab-theme.css" rel="stylesheet">
+</head>
+<body class="has-bottom-nav">
+
+  <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-2">
+    <div class="container-xl">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-uppercase" href="index.html" style="color: #225566;">
+        <img src="images/nidolab-logo.png" alt="Nidolab Logo" style="width: 36px; height: 36px; object-fit: contain;">
+        <span>Nidolab</span>
+        <span class="badge bg-light text-secondary border fw-normal" style="font-size: 0.7rem;">MEUS TIMES</span>
+      </a>
+      <div class="ms-auto">
+        <a href="builder.html" class="btn btn-primary-lab btn-sm rounded-3"><i class="bi bi-plus-lg me-1"></i> Nova Equipe</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-xl py-3 py-lg-4">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-sm btn-primary-lab">Todos (3)</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">VGC 2025</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Reg H</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Smogon OU</button>
+      </div>
+      <small class="text-muted">Ordenado por mais recente</small>
+    </div>
+
+    <!-- Lista de Equipes -->
+    <div class="row g-3 g-lg-4">
+      <!-- Time 1 -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-lab p-3 p-md-4 shadow-sm h-100">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div>
+              <span class="badge badge-lab">VGC 2025 • REG G</span>
+              <h5 class="fw-bold mb-0 mt-1">Hyper Offense Rain</h5>
+              <small class="text-secondary">Modificado há 2 dias • 25-12 (68% WR)</small>
+            </div>
+            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteTeamModal" title="Excluir equipe">
+              <i class="bi bi-trash"></i>
+            </button>
+          </div>
+
+          <div class="row row-cols-6 g-1 my-3 text-center">
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Pelipper</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Archaludon</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Urshifu-R</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Rillaboom</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Incineroar</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Tornadus</small></div></div>
+          </div>
+
+          <div class="d-flex gap-2 mt-auto">
+            <a href="builder.html" class="btn btn-primary-lab btn-sm w-100"><i class="bi bi-play-circle me-1"></i> Carregar Time</a>
+            <button class="btn btn-outline-lab btn-sm"><i class="bi bi-share"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Time 2 -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-lab p-3 p-md-4 shadow-sm h-100">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div>
+              <span class="badge bg-success-subtle text-success border">SMOGON OU</span>
+              <h5 class="fw-bold mb-0 mt-1">Balance Core Lab</h5>
+              <small class="text-secondary">Modificado há 5 dias • 18-9 (66% WR)</small>
+            </div>
+            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteTeamModal">
+              <i class="bi bi-trash"></i>
+            </button>
+          </div>
+
+          <div class="row row-cols-6 g-1 my-3 text-center">
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Ting-Lu</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Gholdengo</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Dondozo</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Clodsire</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Corviknight</small></div></div>
+            <div class="col"><div class="p-1 bg-light rounded"><small style="font-size: 0.65rem;">Gliscor</small></div></div>
+          </div>
+
+          <div class="d-flex gap-2 mt-auto">
+            <a href="builder.html" class="btn btn-primary-lab btn-sm w-100"><i class="bi bi-play-circle me-1"></i> Carregar Time</a>
+            <button class="btn btn-outline-lab btn-sm"><i class="bi bi-share"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Nativo de Confirmação de Exclusão -->
+  <div class="modal fade" id="deleteTeamModal" tabindex="-1" aria-labelledby="deleteTeamModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="border-radius: 1rem;">
+        <div class="modal-body p-4 text-center">
+          <div class="rounded-circle bg-danger-subtle text-danger d-inline-flex align-items-center justify-content-center mb-3" style="width: 56px; height: 56px;">
+            <i class="bi bi-exclamation-triangle-fill fs-3"></i>
+          </div>
+          
+          <small class="text-danger fw-bold text-uppercase d-block mb-1" style="font-size: 0.72rem; letter-spacing: 0.05em;">
+            Ação Irreversível
+          </small>
+          <h4 class="fw-bold mb-2">Excluir equipe?</h4>
+          <h6 class="text-dark fw-semibold mb-3">Hyper Offense Rain</h6>
+          
+          <p class="text-secondary small mb-4">
+            Deseja realmente excluir esta equipe? Esta ação removerá a configuração de EV spreads, itens calibrados e cálculos de velocidade permanentemente do laboratório.
+          </p>
+
+          <div class="d-flex gap-2 justify-content-center">
+            <button type="button" class="btn btn-light border py-2 px-4 rounded-3 fw-semibold" data-bs-dismiss="modal">
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-danger py-2 px-4 rounded-3 fw-semibold">
+              <i class="bi bi-trash-fill me-1"></i> Excluir equipe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="nidolab-bottom-nav py-2 px-3">
+    <div class="d-flex align-items-center justify-content-between text-center">
+      <a href="index.html" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-house-door fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Início</small>
+      </a>
+      <a href="teams.html" class="text-decoration-none active" style="color: #225566; flex: 1;">
+        <i class="bi bi-folder2-fill fs-5 d-block"></i>
+        <small style="font-size: 0.65rem; font-weight: 600;">Meus Times</small>
+      </a>
+      <a href="builder.html" class="nav-fab-btn text-decoration-none mx-2">
+        <i class="bi bi-plus-lg fs-4"></i>
+      </a>
+      <a href="#" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-radar fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Sinergia</small>
+      </a>
+      <a href="#" class="text-decoration-none text-secondary" style="flex: 1;">
+        <i class="bi bi-person-badge fs-5 d-block"></i>
+        <small style="font-size: 0.65rem;">Perfil</small>
+      </a>
+    </div>
+  </nav>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

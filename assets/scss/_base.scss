@@ -1,0 +1,103 @@
+﻿// ============================================================
+// _base.scss — Reset e estilos globais do Nidolab
+// ============================================================
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// --- Importacoes de fontes e icones ---
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css');
+
+// --- CSS Custom Properties (integracao com Bootstrap) ---
+:root {
+  --bs-font-sans-serif: #{v.$main-font};
+  --nidolab-primary:         #{v.$primary};
+  --nidolab-primary-hover:   #{v.$primary-hover};
+  --nidolab-primary-light:   #{v.$primary-light};
+  --nidolab-secondary:       #{v.$secondary};
+  --nidolab-secondary-dark:  #{v.$secondary-dark};
+  --nidolab-surface:         #{v.$surface};
+  --nidolab-card-bg:         #{v.$card-bg};
+  --nidolab-border-subtle:   #{v.$border-subtle};
+  --nidolab-text-muted:      #{v.$text-muted};
+
+  // Tipos Pokemon
+  --type-dragon:    #{v.$type-dragon};
+  --type-ground:    #{v.$type-ground};
+  --type-steel:     #{v.$type-steel};
+  --type-fairy:     #{v.$type-fairy};
+  --type-ghost:     #{v.$type-ghost};
+  --type-fire:      #{v.$type-fire};
+  --type-water:     #{v.$type-water};
+  --type-electric:  #{v.$type-electric};
+  --type-grass:     #{v.$type-grass};
+  --type-dark:      #{v.$type-dark};
+  --type-fighting:  #{v.$type-fighting};
+  --type-flying:    #{v.$type-flying};
+}
+
+// --- Body ---
+body {
+  font-family: v.$main-font;
+  font-size: v.$font-size;
+  background-color: v.$surface;
+  color: v.$text-color;
+}
+
+// --- Botoes ---
+.btn-primary-lab {
+  // Fundo primario escuro, texto branco: alto contraste
+  @include m.btn-interactive(v.$primary, v.$primary-hover);
+}
+
+.btn-outline-lab {
+  // Borda primaria, texto primario, fundo branco: legivel
+  @include m.btn-base(#ffffff, v.$primary, v.$primary);
+
+  &:hover {
+    background-color: v.$primary-light;
+    border-color: v.$primary-hover;
+    color: v.$primary-hover;
+  }
+}
+
+// --- Badge generico do lab ---
+// Fundo primario-light (azul suave), texto primary-dark: contraste aprovado
+.badge-lab {
+  background-color: v.$primary-light;
+  color: v.$primary;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+// --- Badges de tipos Pokemon ---
+.type-badge {
+  &--dragon   { @include m.type-badge(v.$type-dragon); }
+  &--ground   { @include m.type-badge(v.$type-ground); }
+  &--steel    { @include m.type-badge(v.$type-steel); }
+  &--fairy    { @include m.type-badge(v.$type-fairy); }
+  &--ghost    { @include m.type-badge(v.$type-ghost); }
+  &--fire     { @include m.type-badge(v.$type-fire); }
+  &--water    { @include m.type-badge(v.$type-water); }
+  &--electric { @include m.type-badge(v.$type-electric); }
+  &--grass    { @include m.type-badge(v.$type-grass); }
+  &--dark     { @include m.type-badge(v.$type-dark); }
+  &--fighting { @include m.type-badge(v.$type-fighting); }
+  &--flying   { @include m.type-badge(v.$type-flying); }
+}
+
+// --- Card base ---
+.card-lab {
+  @include m.card-base();
+}
+
+// --- Links genericos ---
+// secondary-dark garante leitura sobre fundo branco/claro
+a {
+  color: v.$secondary-dark;
+
+  &:hover {
+    color: v.$primary;
+  }
+}

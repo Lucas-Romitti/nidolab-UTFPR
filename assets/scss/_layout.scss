@@ -1,0 +1,218 @@
+// ============================================================
+// _layout.scss — Componentes de layout e navegacao do Nidolab
+// ============================================================
+@use 'sass:color';
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// --- Cabecalho ---
+.navbar {
+  &.nidolab-header {
+    background: v.$card-bg;
+    border-bottom: 1px solid v.$border-subtle;
+
+    .navbar-brand {
+      color: v.$primary;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: v.$transition;
+
+      &:hover {
+        color: v.$primary-hover;
+      }
+    }
+  }
+}
+
+// --- Desktop Nav ---
+.desktop-nav-links {
+  .nav-link {
+    // text-muted agora e #4a6276: legivel sobre fundo branco
+    color: v.$text-muted;
+    font-weight: 500;
+    transition: v.$transition;
+
+    &:hover {
+      color: v.$primary;
+    }
+
+    &.active {
+      color: v.$primary;
+      font-weight: 600;
+    }
+  }
+
+  @include m.respond-to('mobile') {
+    display: none !important;
+  }
+
+  @include m.respond-to('desktop') {
+    display: flex !important;
+  }
+}
+
+// --- Bottom Nav (Mobile) ---
+.nidolab-bottom-nav {
+  @include m.respond-to('mobile') {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: v.$card-bg;
+    border-top: 2px solid v.$secondary; // borda com a cor secundaria clara — uso correto: decorativo
+    z-index: v.$z-bottom-nav;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+
+    a {
+      color: v.$text-muted;
+      text-decoration: none;
+      flex: 1;
+      transition: v.$transition;
+
+      small {
+        // legenda dos icones: texto escuro suficiente
+        color: v.$text-muted;
+      }
+
+      &.active,
+      &:hover {
+        color: v.$primary;
+
+        small {
+          color: v.$primary;
+        }
+      }
+    }
+  }
+
+  @include m.respond-to('desktop') {
+    display: none !important;
+  }
+}
+
+// --- Botao FAB da bottom nav ---
+// Fundo primario, icone branco: alto contraste
+.nav-fab-btn {
+  @include m.flex-center();
+  width: 50px;
+  height: 50px;
+  margin-top: -24px;
+  background-color: v.$primary;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(v.$primary, 0.4);
+  border: 3px solid v.$card-bg;
+  transition: v.$transition;
+
+  &:hover {
+    background-color: v.$primary-hover;
+    color: #fff;
+  }
+}
+
+// --- Body com espaco para o bottom nav ---
+body.has-bottom-nav {
+  @include m.respond-to('mobile') {
+    padding-bottom: 84px;
+  }
+}
+
+// --- Progress Bar ---
+// Cor primaria sobre fundo cinza-claro do Bootstrap: bom contraste
+.progress-bar {
+  background-color: v.$primary;
+}
+
+// --- Pílula / badge de meta ---
+// secondary-dark no texto, secondary como fundo: combinacao legivel
+.badge-secondary-lab {
+  background-color: v.$secondary;
+  color: v.$secondary-dark;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  padding: 0.25em 0.75em;
+  border: 1px solid color.adjust(v.$secondary, $lightness: -10%);
+}
+
+// --- Card de tip / insight ---
+.card-insight {
+  // fundo primary-light (azul suave), sem borda visivel
+  @include m.card-base(v.$primary-light, 0.75rem);
+  border: 0;
+
+  .insight-icon {
+    @include m.flex-center();
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .insight-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #854d0e;
+  }
+
+  p {
+    color: v.$text-muted;
+  }
+}
+
+// --- Passo de onboarding ---
+.step-number {
+  @include m.flex-center();
+  @include m.card-base(v.$primary-light, 0.5rem);
+  width: 38px;
+  height: 38px;
+  color: v.$primary;
+  font-weight: 700;
+  border: 0;
+  flex-shrink: 0;
+}
+
+// --- Destaque de secao ---
+// Titulo com sublinhado na cor secundaria escura
+.section-title {
+  color: v.$text-color;
+  font-weight: 700;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background-color: v.$secondary-dark;
+    margin-top: 0.35rem;
+    border-radius: 2px;
+  }
+}
+
+// --- Footer Desktop ---
+footer.nidolab-footer {
+  border-top: 2px solid v.$secondary; // uso decorativo da cor clara: linha de separacao
+  background: v.$card-bg;
+
+  span,
+  p {
+    color: v.$text-muted;
+  }
+
+  a {
+    color: v.$secondary-dark; // legivel sobre branco
+    text-decoration: none;
+    transition: v.$transition;
+
+    &:hover {
+      color: v.$primary;
+    }
+  }
+}

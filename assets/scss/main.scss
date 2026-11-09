@@ -1,4 +1,13 @@
+﻿// ============================================================
+// main.scss — Ponto de entrada único do Sass do Nidolab
+// Ordem: @use primeiro → @import do Bootstrap → módulos Nidolab
+// ============================================================
+
+// 1. Módulos Nidolab (devem vir antes de qualquer @import)
 @use 'variables';
-@use 'base';
 @use 'mixins';
+@use 'base';
 @use 'layout';
+
+// 2. Bootstrap via @import (deve vir depois dos @use)
+@import '../../node_modules/bootstrap/scss/bootstrap';

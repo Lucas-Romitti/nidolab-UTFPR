@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass assets/scss/main.scss nidolab-theme.css --style=compressed --quiet-deps",
+    "sass:watch": "sass assets/scss/main.scss nidolab-theme.css --watch --style=expanded --quiet-deps"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
     "uuid": "^14.0.2"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "sass": "^1.107.1"
   }
 }

@@ -1,3 +1,49 @@
-//CORES ---
+﻿// ============================================================
+// _variables.scss — Tokens de design do Nidolab
+// ============================================================
 
-$primary-color: ;
+// --- Paleta principal ---
+$primary:        #225566;   // azul-petróleo da marca (texto, botões, destaques)
+$primary-hover:  #19404d;   // variante escura para hover/active
+$primary-light:  #dceef5;   // fundo suave derivado do primário (cards, badges)
+
+// --- Paleta secundária ---
+// Usada como cor de acento visual (bordas, pílulas, highlights).
+// Nunca como texto sobre branco — contraste insuficiente.
+$secondary:       #B7E7FC;  // azul-céu claro: exclusivo para fundos/bordas
+$secondary-dark:  #0e7490;  // versão escura legível sobre branco (links, ícones)
+
+// --- Superfícies ---
+$surface:        #f1f8fb;   // fundo geral da página (levíssimo azul)
+$card-bg:        #ffffff;   // fundo dos cards
+$border-subtle:  #cfe8f0;   // bordas discretas (harmoniza com primário)
+
+// --- Texto ---
+$text-color:     #1e293b;   // cor base de texto
+$text-muted:     #4a6276;   // texto secundário/desabilitado (mais escuro que antes)
+
+// --- Tipografia ---
+$main-font:  'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-size:  1rem;          // 16 px
+
+// --- Espaçamento / Forma ---
+$radius-card:    1rem;      // border-radius padrao de cards
+$radius-btn:     0.5rem;    // border-radius de botoes
+$transition:     all 0.2s ease-in-out;
+
+// --- Cores dos tipos Pokemon ---
+$type-dragon:    #0284c7;
+$type-ground:    #b45309;
+$type-steel:     #64748b;
+$type-fairy:     #ec4899;
+$type-ghost:     #6b21a8;
+$type-fire:      #dc2626;
+$type-water:     #2563eb;
+$type-electric:  #ca8a04;   // escurecido: amarelo puro nao le bem no branco
+$type-grass:     #16a34a;
+$type-dark:      #1e293b;
+$type-fighting:  #c2410c;
+$type-flying:    #0284c7;   // escurecido: ciano claro nao le bem no branco
+
+// --- Z-index ---
+$z-bottom-nav:   1030;

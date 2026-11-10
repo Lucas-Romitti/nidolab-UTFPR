@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 // _variables.scss — Tokens de design do Nidolab
 // ============================================================
 
@@ -8,10 +8,12 @@ $primary-hover:  #19404d;   // variante escura para hover/active
 $primary-light:  #dceef5;   // fundo suave derivado do primário (cards, badges)
 
 // --- Paleta secundária ---
-// Usada como cor de acento visual (bordas, pílulas, highlights).
-// Nunca como texto sobre branco — contraste insuficiente.
-$secondary:       #B7E7FC;  // azul-céu claro: exclusivo para fundos/bordas
-$secondary-dark:  #0e7490;  // versão escura legível sobre branco (links, ícones)
+// Tons quentes/terrosos da marca (harmonizam com o azul-petróleo primário)
+$secondary:        #664422;  // tom marrom quente (cor secundária principal)
+$secondary-hover:  #4e3318;  // variante escura para hover/active
+$secondary-dark:   #503316;  // versão escura de alto contraste (AAA) para textos e links sobre fundo claro
+$secondary-light:  #BB9C7C;  // tom areia/caramelo suave para bordas, badges e destaques visuais
+$secondary-subtle: #f6efe8;  // fundo suave derivado do secundário (análogo ao $primary-light)
 
 // --- Superfícies ---
 $surface:        #f1f8fb;   // fundo geral da página (levíssimo azul)
@@ -20,7 +22,7 @@ $border-subtle:  #cfe8f0;   // bordas discretas (harmoniza com primário)
 
 // --- Texto ---
 $text-color:     #1e293b;   // cor base de texto
-$text-muted:     #4a6276;   // texto secundário/desabilitado (mais escuro que antes)
+$text-muted:     #4a6276;   // texto secundário/desabilitado
 
 // --- Tipografia ---
 $main-font:  'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass assets/scss/main.scss nidolab-theme.css --style=compressed --quiet-deps",
+    "sass": "sass assets/scss/main.scss nidolab-theme.css --style=expanded --quiet-deps",
     "sass:watch": "sass assets/scss/main.scss nidolab-theme.css --watch --style=expanded --quiet-deps"
   },
   "repository": {

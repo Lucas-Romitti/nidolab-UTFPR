@@ -1,13 +1,16 @@
-﻿// ============================================================
+// ============================================================
 // main.scss — Ponto de entrada único do Sass do Nidolab
-// Ordem: @use primeiro → @import do Bootstrap → módulos Nidolab
+// Ordem: Configuração do Bootstrap → Bootstrap → Módulos Nidolab
 // ============================================================
 
-// 1. Módulos Nidolab (devem vir antes de qualquer @import)
-@use 'variables';
-@use 'mixins';
-@use 'base';
-@use 'layout';
+// 1. Configuração de variáveis do Bootstrap com os tokens do Nidolab
+$primary:           #225566;
+$secondary:         #664422;
+$font-family-base:  ('Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
 
-// 2. Bootstrap via @import (deve vir depois dos @use)
+// 2. Framework Bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap';
+
+// 3. Módulos de estilo do Nidolab (aplicados sobre o framework)
+@import 'base';
+@import 'layout';

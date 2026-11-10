@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nidolab - Preparar Pokémon (EVs & Moves)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" integrity="sha384-Bk5cbLkZQ5raZ0+H2/+VbfYx3WpvxvQK4zqXZr7sYODuaX7bKXoSOnipQxkaS8sv" crossorigin="anonymous">
   <link href="nidolab-theme.css" rel="stylesheet">
   <style>
     .ev-progress-bar {
@@ -44,9 +45,8 @@
         <div class="card card-lab p-3 mb-3 shadow-xs">
           <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
-              <span class="badge bg-secondary-subtle text-secondary">#445 · OU TIER</span>
+              <span class="badge bg-secondary-subtle text-secondary">#445 · Pokédex</span>
               <h4 class="fw-bold mb-0">Garchomp</h4>
-              <small class="text-secondary">Dragão Terrestre</small>
             </div>
             <div class="d-flex gap-1">
               <span class="badge text-white" style="background-color: var(--type-dragon);">DRAGÃO</span>
@@ -58,7 +58,7 @@
             <div class="col-6">
               <div class="p-2 bg-light rounded-3">
                 <small class="text-muted d-block" style="font-size: 0.7rem;">NATURE</small>
-                <span class="fw-bold small text-primary" style="color: #225566 !important;">Jolly (+Vel, -SpA)</span>
+                <span class="fw-bold small text-primary" style="color: #225566 !important;">Jolly (+SPE , -SPA)</span>
               </div>
             </div>
             <div class="col-6">
@@ -82,42 +82,42 @@
                 <span class="badge text-white me-1" style="background-color: var(--type-ground); font-size: 0.65rem;">TERRA</span>
                 <span class="fw-bold" style="font-size: 0.85rem;">Earthquake</span>
               </div>
-              <small class="text-muted">PWR 100 · ACC 100% · PP 10</small>
+              <small class="text-muted">BP 100 · ACC 100% · PP 10</small>
             </div>
             <div class="border rounded-3 p-2 bg-light-subtle d-flex justify-content-between align-items-center">
               <div>
                 <span class="badge text-white me-1" style="background-color: var(--type-dragon); font-size: 0.65rem;">DRAGÃO</span>
                 <span class="fw-bold" style="font-size: 0.85rem;">Dragon Claw</span>
               </div>
-              <small class="text-muted">PWR 80 · ACC 100% · PP 15</small>
+              <small class="text-muted">BP 80 · ACC 100% · PP 15</small>
             </div>
             <div class="border rounded-3 p-2 bg-light-subtle d-flex justify-content-between align-items-center">
               <div>
-                <span class="badge text-white me-1" style="background-color: #64748b; font-size: 0.65rem;">NORMAL</span>
+                <span class="badge text-white me-1" style="background-color: var(--type-normal); font-size: 0.65rem;">NORMAL</span>
                 <span class="fw-bold" style="font-size: 0.85rem;">Swords Dance</span>
               </div>
-              <small class="text-muted">Efeito: +2 Atk · PP 20</small>
+              <small class="text-muted">Status · PP 20</small>
             </div>
             <div class="border rounded-3 p-2 bg-light-subtle d-flex justify-content-between align-items-center">
               <div>
                 <span class="badge text-white me-1" style="background-color: var(--type-steel); font-size: 0.65rem;">AÇO</span>
                 <span class="fw-bold" style="font-size: 0.85rem;">Iron Head</span>
               </div>
-              <small class="text-muted">PWR 80 · ACC 100% · Anti-Fada</small>
+              <small class="text-muted">BP 80 · ACC 100% · PP 15</small>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Calibrador de 508 EVs -->
+      <!-- Calibrador de 510 EVs -->
       <div class="col-12 col-lg-6">
         <div class="card card-lab p-3 p-md-4 shadow-sm">
           <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
               <h6 class="fw-bold mb-0"><i class="bi bi-sliders2 text-primary me-1" style="color: #225566 !important;"></i> Calibrador de EVs & IVs</h6>
-              <small class="text-muted">Capacidade máxima: 508 Pontos</small>
+              <small class="text-muted">Capacidade máxima: 510 Pontos</small>
             </div>
-            <span class="badge badge-lab">Restantes: 4 / 508</span>
+            <span class="badge badge-lab">Restantes: 2 / 510</span>
           </div>
 
           <div class="d-flex flex-wrap gap-1 mb-4">
@@ -138,7 +138,7 @@
 
             <div>
               <div class="d-flex justify-content-between small mb-1">
-                <span class="fw-semibold text-warning-emphasis">ATK ? MAX</span>
+                <span class="fw-semibold text-warning-emphasis">ATK </span>
                 <span class="text-warning-emphasis"><strong>252</strong> EVs (Stat: 359)</span>
               </div>
               <div class="ev-progress-bar"><div class="ev-progress-fill active-max" style="width: 100%;"></div></div>
@@ -154,8 +154,8 @@
 
             <div>
               <div class="d-flex justify-content-between small mb-1">
-                <span class="fw-semibold text-danger">SPA ? Jolly</span>
-                <span><strong>0</strong> EVs (Stat: 176)</span>
+                <span class="fw-semibold text-danger"><i class="bi bi-arrow-down-circle"></i> SPA</span>
+                <span><strong>0</strong>EVs (Stat: 176)</span>
               </div>
               <div class="ev-progress-bar"><div class="ev-progress-fill" style="width: 0%;"></div></div>
             </div>
@@ -170,7 +170,7 @@
 
             <div>
               <div class="d-flex justify-content-between small mb-1">
-                <span class="fw-semibold text-primary" style="color: #225566 !important;">SPE ? MAX</span>
+                <span class="fw-semibold text-primary" style="color: #225566 !important;"><i class="bi bi-arrow-up-circle"></i> SPE </span>
                 <span><strong>252</strong> EVs (Stat: 333)</span>
               </div>
               <div class="ev-progress-bar"><div class="ev-progress-fill" style="width: 100%;"></div></div>

@@ -70,7 +70,6 @@ O projeto será disponibilizado posteriormente por meio do GitHub Pages.
 * **Git**
 * **GitHub**
 * **ESLint**
-* **Prettier**
 
 ---
 
@@ -78,6 +77,13 @@ O projeto será disponibilizado posteriormente por meio do GitHub Pages.
 
 ```text
 nidolab/
+├── assets/
+│   └── scss/
+│       ├── _base.scss
+│       ├── _layout.scss
+│       ├── _mixins.scss
+│       ├── _variables.scss
+│       └── main.scss
 │
 ├── docs/
 │   ├── prd.md

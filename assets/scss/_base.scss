@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 // _base.scss — Reset e estilos globais do Nidolab
 // ============================================================
 @use 'variables' as v;
@@ -11,15 +11,18 @@
 // --- CSS Custom Properties (integracao com Bootstrap) ---
 :root {
   --bs-font-sans-serif: #{v.$main-font};
-  --nidolab-primary:         #{v.$primary};
-  --nidolab-primary-hover:   #{v.$primary-hover};
-  --nidolab-primary-light:   #{v.$primary-light};
-  --nidolab-secondary:       #{v.$secondary};
-  --nidolab-secondary-dark:  #{v.$secondary-dark};
-  --nidolab-surface:         #{v.$surface};
-  --nidolab-card-bg:         #{v.$card-bg};
-  --nidolab-border-subtle:   #{v.$border-subtle};
-  --nidolab-text-muted:      #{v.$text-muted};
+  --nidolab-primary:          #{v.$primary};
+  --nidolab-primary-hover:    #{v.$primary-hover};
+  --nidolab-primary-light:    #{v.$primary-light};
+  --nidolab-secondary:        #{v.$secondary};
+  --nidolab-secondary-hover:  #{v.$secondary-hover};
+  --nidolab-secondary-dark:   #{v.$secondary-dark};
+  --nidolab-secondary-light:  #{v.$secondary-light};
+  --nidolab-secondary-subtle: #{v.$secondary-subtle};
+  --nidolab-surface:          #{v.$surface};
+  --nidolab-card-bg:          #{v.$card-bg};
+  --nidolab-border-subtle:    #{v.$border-subtle};
+  --nidolab-text-muted:       #{v.$text-muted};
 
   // Tipos Pokemon
   --type-dragon:    #{v.$type-dragon};
@@ -50,6 +53,11 @@ body {
   @include m.btn-interactive(v.$primary, v.$primary-hover);
 }
 
+.btn-secondary-lab {
+  // Fundo secundario marrom escuro, texto branco: alto contraste
+  @include m.btn-interactive(v.$secondary, v.$secondary-hover);
+}
+
 .btn-outline-lab {
   // Borda primaria, texto primario, fundo branco: legivel
   @include m.btn-base(#ffffff, v.$primary, v.$primary);
@@ -58,6 +66,17 @@ body {
     background-color: v.$primary-light;
     border-color: v.$primary-hover;
     color: v.$primary-hover;
+  }
+}
+
+.btn-outline-secondary-lab {
+  // Borda secundaria, texto secundario, fundo branco
+  @include m.btn-base(#ffffff, v.$secondary, v.$secondary);
+
+  &:hover {
+    background-color: v.$secondary-subtle;
+    border-color: v.$secondary-hover;
+    color: v.$secondary-hover;
   }
 }
 
@@ -93,7 +112,7 @@ body {
 }
 
 // --- Links genericos ---
-// secondary-dark garante leitura sobre fundo branco/claro
+// secondary-dark garante leitura e contraste acessivel sobre fundo branco/claro
 a {
   color: v.$secondary-dark;
 

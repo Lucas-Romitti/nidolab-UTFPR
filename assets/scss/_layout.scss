@@ -28,7 +28,6 @@
 // --- Desktop Nav ---
 .desktop-nav-links {
   .nav-link {
-    // text-muted agora e #4a6276: legivel sobre fundo branco
     color: v.$text-muted;
     font-weight: 500;
     transition: v.$transition;
@@ -61,7 +60,7 @@
     left: 0;
     right: 0;
     background: v.$card-bg;
-    border-top: 2px solid v.$secondary; // borda com a cor secundaria clara — uso correto: decorativo
+    border-top: 2px solid v.$secondary-light; // borda com a cor secundaria suave — uso decorativo e harmonioso
     z-index: v.$z-bottom-nav;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
 
@@ -72,7 +71,6 @@
       transition: v.$transition;
 
       small {
-        // legenda dos icones: texto escuro suficiente
         color: v.$text-muted;
       }
 
@@ -126,16 +124,16 @@ body.has-bottom-nav {
 }
 
 // --- Pílula / badge de meta ---
-// secondary-dark no texto, secondary como fundo: combinacao legivel
+// Fundo sutil derivado do secundário, borda clara e texto escuro de alto contraste
 .badge-secondary-lab {
-  background-color: v.$secondary;
+  background-color: v.$secondary-subtle;
   color: v.$secondary-dark;
   font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   border-radius: 999px;
   padding: 0.25em 0.75em;
-  border: 1px solid color.adjust(v.$secondary, $lightness: -10%);
+  border: 1px solid v.$secondary-light;
 }
 
 // --- Card de tip / insight ---
@@ -180,7 +178,7 @@ body.has-bottom-nav {
 }
 
 // --- Destaque de secao ---
-// Titulo com sublinhado na cor secundaria escura
+// Titulo com sublinhado na cor secundaria quente
 .section-title {
   color: v.$text-color;
   font-weight: 700;
@@ -190,7 +188,7 @@ body.has-bottom-nav {
     display: block;
     width: 2.5rem;
     height: 3px;
-    background-color: v.$secondary-dark;
+    background-color: v.$secondary;
     margin-top: 0.35rem;
     border-radius: 2px;
   }
@@ -198,7 +196,7 @@ body.has-bottom-nav {
 
 // --- Footer Desktop ---
 footer.nidolab-footer {
-  border-top: 2px solid v.$secondary; // uso decorativo da cor clara: linha de separacao
+  border-top: 2px solid v.$secondary-light; // uso decorativo da cor suave: linha de separacao
   background: v.$card-bg;
 
   span,
@@ -207,7 +205,7 @@ footer.nidolab-footer {
   }
 
   a {
-    color: v.$secondary-dark; // legivel sobre branco
+    color: v.$secondary-dark; // legivel sobre branco (contraste AAA)
     text-decoration: none;
     transition: v.$transition;
 
